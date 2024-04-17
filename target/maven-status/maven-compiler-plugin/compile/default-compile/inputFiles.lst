@@ -1,0 +1,9 @@
+/var/lib/jenkins/workspace/game/src/main/java/com/javaproject/controllers/BoardGameController.java
+/var/lib/jenkins/workspace/game/src/main/java/com/javaproject/controllers/HomeController.java
+/var/lib/jenkins/workspace/game/src/main/java/com/javaproject/DatabaseServiceProjectApplication.java
+/var/lib/jenkins/workspace/game/src/main/java/com/javaproject/security/LoggingAccessDeniedHandler.java
+/var/lib/jenkins/workspace/game/src/main/java/com/javaproject/beans/BoardGame.java
+/var/lib/jenkins/workspace/game/src/main/java/com/javaproject/security/SecurityConfig.java
+/var/lib/jenkins/workspace/game/src/main/java/com/javaproject/database/DatabaseAccess.java
+/var/lib/jenkins/workspace/game/src/main/java/com/javaproject/beans/ErrorMessage.java
+/var/lib/jenkins/workspace/game/src/main/java/com/javaproject/beans/Review.java

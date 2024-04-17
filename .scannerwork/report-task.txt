@@ -1,0 +1,6 @@
+projectKey=game
+serverUrl=http://54.234.64.228:9000
+serverVersion=9.9.4.87374
+dashboardUrl=http://54.234.64.228:9000/dashboard?id=game
+ceTaskId=AY7pIiwr2gKVuB_stXIz
+ceTaskUrl=http://54.234.64.228:9000/api/ce/task?id=AY7pIiwr2gKVuB_stXIz

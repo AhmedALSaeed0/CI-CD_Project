@@ -1,0 +1,3 @@
+# Created at 2024-04-16T22:58:59.122
+Picked up JAVA_TOOL_OPTIONS: -Dmaven.ext.class.path="/var/lib/jenkins/workspace/game@tmp/withMavenbf926bc9/pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="/var/lib/jenkins/workspace/game@tmp/withMavenbf926bc9" 
+
