@@ -1,53 +1,43 @@
-# BoardgameListingWebApp
+# CI/CD DevOps Project for Board Game
 
-## Description
+This project sets up a Continuous Integration and Continuous Deployment (CI/CD) pipeline for testing a board game. The pipeline includes setting up infrastructure on AWS, configuring EC2 instances, installing necessary tools such as Docker, SonarQube, Nexus, and Jenkins, and deploying the application using Kubernetes.
 
-**Board Game Database Full-Stack Web Application.**
-This web application displays lists of board games and their reviews. While anyone can view the board game lists and reviews, they are required to log in to add/ edit the board games and their reviews. The 'users' have the authority to add board games to the list and add reviews, and the 'managers' have the authority to edit/ delete the reviews on top of the authorities of users.  
+## Infrastructure Setup
 
-## Technologies
+- **VPC and Security Groups**: A Virtual Private Cloud (VPC) has been created on AWS, along with security groups to control inbound and outbound traffic. The necessary ports for the project have been opened in these security groups.
 
-- Java
-- Spring Boot
-- Amazon Web Services(AWS) EC2
-- Thymeleaf
-- Thymeleaf Fragments
-- HTML5
-- CSS
-- JavaScript
-- Spring MVC
-- JDBC
-- H2 Database Engine (In-memory)
-- JUnit test framework
-- Spring Security
-- Twitter Bootstrap
-- Maven
+- **EC2 Instances**: Six EC2 instances have been provisioned on AWS:
+  - `master`
+  - `first-slave1`
+  - `second-slave2`
+  - `SonarQube`
+  - `Nexus`
+  - `Jenkins`
 
-## Features
+## Software Installation
 
-- Full-Stack Application
-- UI components created with Thymeleaf and styled with Twitter Bootstrap
-- Authentication and authorization using Spring Security
-  - Authentication by allowing the users to authenticate with a username and password
-  - Authorization by granting different permissions based on the roles (non-members, users, and managers)
-- Different roles (non-members, users, and managers) with varying levels of permissions
-  - Non-members only can see the boardgame lists and reviews
-  - Users can add board games and write reviews
-  - Managers can edit and delete the reviews
-- Deployed the application on AWS EC2
-- JUnit test framework for unit testing
-- Spring MVC best practices to segregate views, controllers, and database packages
-- JDBC for database connectivity and interaction
-- CRUD (Create, Read, Update, Delete) operations for managing data in the database
-- Schema.sql file to customize the schema and input initial data
-- Thymeleaf Fragments to reduce redundancy of repeating HTML elements (head, footer, navigation)
+- **Docker**: Docker has been installed on the master and slave nodes to containerize the application components and facilitate easy deployment.
 
-## How to Run
+- **Kubernetes (k8s)**:
+  - `kubeadm` has been installed on the master node to set up a Kubernetes cluster.
+  - `kubelet` has been installed on all nodes to manage Kubernetes pods.
+  - `kubectl` has been installed as a command-line interface to interact with the Kubernetes cluster.
 
-1. Clone the repository
-2. Open the project in your IDE of choice
-3. Run the application
-4. To use initial user data, use the following credentials.
-  - username: bugs    |     password: bunny (user role)
-  - username: daffy   |     password: duck  (manager role)
-5. You can also sign-up as a new user and customize your role to play with the application! 😊
+- **SonarQube**: SonarQube server has been set up using Docker:
+  ```bash
+  docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
+  ```
+
+- **Sonatype Nexus**: Nexus server has been set up using Docker:
+  ```bash
+  docker run -d --name nexus -p 8081:8081 sonatype/nexus3:latest
+  ```
+
+- **Jenkins**: Jenkins server will be installed on the Jenkins instance. The installation process will include setting up pipelines, configuring jobs, and integrating with other tools as needed.
+
+## Next Steps
+
+1. **Jenkins Setup**: Install Jenkins on the Jenkins instance and configure necessary plugins and jobs for the CI/CD pipeline.
+2. **Pipeline Configuration**: Define Jenkins pipelines to automate the build, test, and deployment processes.
+3. **Integration with SonarQube and Nexus**: Integrate Jenkins with SonarQube for code quality analysis and Nexus for artifact management.
+4. **Deployment with Kubernetes**: Deploy the application using Kubernetes, managing containers and scaling as needed.
