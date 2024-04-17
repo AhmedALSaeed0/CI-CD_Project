@@ -1,4 +1,4 @@
-# CI/CD DevOps Project for Board Game
+# CI/CD DevOps Project for a Game
 
 This project sets up a Continuous Integration and Continuous Deployment (CI/CD) pipeline for testing a board game. The pipeline includes setting up infrastructure on AWS, configuring EC2 instances, installing necessary tools such as Docker, SonarQube, Nexus, and Jenkins, and deploying the application using Kubernetes.
 
